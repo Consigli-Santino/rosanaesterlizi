@@ -1,0 +1,618 @@
+/* Color Palette */
+:root {
+    --warm-orange: #F5A94E;
+    --beige-light: #E8D4BC;
+    --terracota-coral: #D88B72;
+    --peach-orange: #F4A574;
+    --dark-teal: #4A5F5E;
+    --orange-yellow: #E8A96B;
+    --blue-gray: #6B8695;
+    --cream-light: #F5F5F0;
+    --mustard-yellow: #E8B75C;
+}
+
+/* General Styles */
+body {
+    background-color: var(--cream-light);
+    color: var(--dark-teal);
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--beige-light);
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    padding: 4rem 6rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--dark-teal);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-text .subtitle {
+    font-size: 1.5rem;
+    color: var(--terracota-coral);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.hero-text .hero-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Audience Section */
+.audience-section {
+    width: 100%;
+    background-color: #fff;
+    padding: 6rem 0;
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.audience-item {
+    padding: 0;
+    border-left: 5px solid var(--warm-orange);
+    padding-left: 2.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.audience-item:hover {
+    border-left-color: var(--terracota-coral);
+}
+
+.audience-icon {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 3px solid var(--warm-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--warm-orange);
+    margin-bottom: 1.5rem;
+}
+
+.audience-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-teal);
+    margin-bottom: 1rem;
+}
+
+.audience-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+}
+
+/* Modalities Section */
+.modalities-section {
+    width: 100%;
+    background-color: var(--beige-light);
+    padding: 6rem 0;
+}
+
+.modalities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.modality-item {
+    padding: 0;
+    text-align: left;
+}
+
+.modality-icon {
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid var(--terracota-coral);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--terracota-coral);
+    margin-bottom: 1.5rem;
+}
+
+.modality-item h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark-teal);
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid var(--terracota-coral);
+    padding-bottom: 0.5rem;
+}
+
+.modality-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+/* Resonancia Section */
+.resonancia-section {
+    width: 100%;
+    background-color: var(--dark-teal);
+    padding: 5rem 0;
+}
+
+.resonancia-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 6rem;
+    text-align: center;
+}
+
+.resonancia-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.resonancia-text p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+}
+
+/* About Section */
+.about-section {
+    width: 100%;
+    background-color: #fff;
+    padding: 6rem 0;
+}
+
+.about-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    padding: 0 6rem;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-teal);
+    margin-bottom: 1.5rem;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--terracota-coral);
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+}
+
+/* Why Online Section */
+.why-online-section {
+    width: 100%;
+    background-color: var(--cream-light);
+    padding: 5rem 0;
+}
+
+.why-online-text {
+    max-width: 800px;
+    margin: 2rem auto 0;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+}
+
+/* FAQ Section */
+.faq-section {
+    width: 100%;
+    background-color: #fff;
+    padding: 6rem 0;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 3rem auto 0;
+}
+
+.faq-item {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--beige-light);
+    padding-bottom: 1rem;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover h3 {
+    color: var(--warm-orange);
+}
+
+.faq-question h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-teal);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--warm-orange);
+    min-width: 30px;
+    text-align: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 200px;
+    padding: 1rem 0 0.5rem;
+}
+
+.faq-answer p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+}
+
+/* Container */
+.container-full {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 6rem;
+}
+
+.container-full h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-teal);
+    text-align: center;
+}
+
+/* Contact Section */
+.contact-section {
+    width: 100%;
+    background-color: var(--warm-orange);
+    padding: 5rem 0;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.contact-section h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+}
+
+.btn-contact {
+    display: inline-block;
+    background: white;
+    color: var(--dark-teal);
+    padding: 1rem 3rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    color: white;
+}
+
+.whatsapp-icon {
+    fill: white;
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-icon-sm {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-content,
+    .about-content,
+    .container-full {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .services-grid {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 2rem;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image img {
+        max-width: 280px;
+    }
+
+    .audience-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .modalities-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .resonancia-content {
+        padding: 0 2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    .about-image img {
+        margin: 0 auto;
+        max-width: 280px;
+    }
+
+    .container-full {
+        padding: 0 2rem;
+    }
+
+    .contact-content {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-text .subtitle {
+        font-size: 1.125rem;
+    }
+
+    .hero-text .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        max-width: 240px;
+    }
+
+    .audience-item {
+        padding: 2rem 1.5rem;
+    }
+
+    .modality-item {
+        padding: 2rem 1.5rem;
+    }
+
+    .about-image img {
+        max-width: 240px;
+    }
+
+    .about-text h2,
+    .container-full h2,
+    .resonancia-text h2,
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-section {
+        padding: 4rem 0;
+    }
+
+    .contact-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content,
+    .about-content,
+    .container-full,
+    .resonancia-content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text .subtitle {
+        font-size: 1rem;
+    }
+
+    .about-text h2,
+    .container-full h2,
+    .resonancia-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .contact-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .contact-section h3 {
+        font-size: 1.25rem;
+    }
+
+    .btn-contact {
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
+    }
+
+    .faq-question {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1.125rem;
+    }
+}
