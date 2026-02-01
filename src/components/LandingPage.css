@@ -20,7 +20,7 @@ body {
 /* Hero Section */
 .hero-section {
     width: 100%;
-    min-height: 100vh;
+    min-height: 75vh;
     background-color: var(--beige-light);
     display: flex;
     align-items: center;
@@ -33,30 +33,41 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    gap: 4rem;
-    padding: 4rem 6rem;
+    gap: 3rem;
+    padding: 3rem 6rem;
     align-items: center;
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--dark-teal);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     line-height: 1.2;
 }
 
 .hero-text .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     color: var(--terracota-coral);
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
 }
 
 .hero-text .hero-description {
-    font-size: 1.125rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.7;
     color: #555;
+    margin-bottom: 1rem;
+}
+
+.hero-text .hero-note {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark-teal);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--warm-orange);
 }
 
 .hero-image {
@@ -79,14 +90,14 @@ body {
 .audience-section {
     width: 100%;
     background-color: #fff;
-    padding: 6rem 0;
+    padding: 3.5rem 0;
 }
 
 .audience-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    margin-top: 3rem;
+    gap: 3rem;
+    margin-top: 2rem;
 }
 
 .audience-item {
@@ -130,14 +141,14 @@ body {
 .modalities-section {
     width: 100%;
     background-color: var(--beige-light);
-    padding: 6rem 0;
+    padding: 3.5rem 0;
 }
 
 .modalities-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-    margin-top: 3rem;
+    gap: 3rem;
+    margin-top: 2rem;
 }
 
 .modality-item {
@@ -178,7 +189,7 @@ body {
 .resonancia-section {
     width: 100%;
     background-color: var(--dark-teal);
-    padding: 5rem 0;
+    padding: 3.5rem 0;
 }
 
 .resonancia-content {
@@ -189,15 +200,15 @@ body {
 }
 
 .resonancia-text h2 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 700;
     color: white;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .resonancia-text p {
-    font-size: 1.125rem;
-    line-height: 1.8;
+    font-size: 1.075rem;
+    line-height: 1.7;
     color: rgba(255, 255, 255, 0.95);
     margin: 0;
 }
@@ -206,60 +217,83 @@ body {
 .about-section {
     width: 100%;
     background-color: #fff;
-    padding: 6rem 0;
+    padding: 3.5rem 0;
 }
 
 .about-content {
     max-width: 1400px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 5rem;
+    grid-template-columns: 1fr 2fr;
+    gap: 3.5rem;
     padding: 0 6rem;
-    align-items: center;
+    align-items: start;
 }
 
 .about-image img {
     width: 100%;
-    max-width: 320px;
+    max-width: 280px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
 .about-text h2 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 700;
     color: var(--dark-teal);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .about-text h3 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 600;
     color: var(--terracota-coral);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .about-text p {
-    font-size: 1.125rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.7;
     color: #555;
     margin: 0;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-list li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.about-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--warm-orange);
+    font-weight: bold;
 }
 
 /* Why Online Section */
 .why-online-section {
     width: 100%;
     background-color: var(--cream-light);
-    padding: 5rem 0;
+    padding: 3.5rem 0;
 }
 
 .why-online-text {
     max-width: 800px;
-    margin: 2rem auto 0;
-    font-size: 1.125rem;
-    line-height: 1.8;
+    margin: 1.5rem auto 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
     color: #555;
     text-align: center;
 }
@@ -268,12 +302,12 @@ body {
 .faq-section {
     width: 100%;
     background-color: #fff;
-    padding: 6rem 0;
+    padding: 3.5rem 0;
 }
 
 .faq-list {
     max-width: 900px;
-    margin: 3rem auto 0;
+    margin: 2rem auto 0;
 }
 
 .faq-item {
@@ -341,17 +375,214 @@ body {
 }
 
 .container-full h2 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 700;
     color: var(--dark-teal);
     text-align: center;
+}
+
+/* Consultation Section */
+.consultation-section {
+    width: 100%;
+    background-color: var(--beige-light);
+    padding: 3.5rem 0;
+}
+
+.consultation-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.consultation-section h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--dark-teal);
+    margin-bottom: 0.5rem;
+}
+
+.consultation-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--warm-orange);
+    margin: 0.5rem 0 1rem;
+}
+
+.consultation-description {
+    font-size: 1.075rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.payment-options h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--dark-teal);
+    margin-bottom: 1.5rem;
+}
+
+.payment-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+}
+
+.btn-payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: white;
+    color: var(--dark-teal);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    border: 2px solid var(--dark-teal);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-payment:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-payment.paypal {
+    background: #0070ba;
+    color: white;
+    border-color: #0070ba;
+}
+
+.btn-payment.paypal:hover {
+    background: #005a94;
+    border-color: #005a94;
+}
+
+.payment-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.payment-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    flex-shrink: 0;
+}
+
+.global66-logo {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+.turnito-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.75rem;
+    object-fit: contain;
+}
+
+.payment-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: 2px solid var(--terracota-coral);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.payment-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--warm-orange);
+}
+
+.payment-link.global66 {
+    color: var(--dark-teal);
+    border-color: #00D4AA;
+}
+
+.payment-link.global66:hover {
+    border-color: #00B893;
+}
+
+.payment-details {
+    text-align: left;
+    flex: 1;
+}
+
+.payment-details strong {
+    display: block;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+    color: var(--dark-teal);
+}
+
+.payment-details p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.payment-details .highlight {
+    font-weight: 700;
+    color: var(--warm-orange);
+    font-size: 1.1rem;
+}
+
+.payment-note {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+}
+
+.btn-turnito {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--terracota-coral);
+    color: white;
+    padding: 0.875rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    border: 2px solid var(--terracota-coral);
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(216, 139, 114, 0.3);
+}
+
+.btn-turnito:hover {
+    background: transparent;
+    color: var(--terracota-coral);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(216, 139, 114, 0.4);
 }
 
 /* Contact Section */
 .contact-section {
     width: 100%;
     background-color: var(--warm-orange);
-    padding: 5rem 0;
+    padding: 3.5rem 0;
 }
 
 .contact-content {
@@ -362,17 +593,17 @@ body {
 }
 
 .contact-section h2 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 700;
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .contact-section h3 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .btn-contact {
@@ -532,12 +763,19 @@ body {
         max-width: 240px;
     }
 
-    .audience-item {
-        padding: 2rem 1.5rem;
+    .audience-section,
+    .modalities-section,
+    .resonancia-section,
+    .about-section,
+    .why-online-section,
+    .faq-section,
+    .consultation-section,
+    .contact-section {
+        padding: 2.5rem 0;
     }
 
-    .modality-item {
-        padding: 2rem 1.5rem;
+    .audience-item {
+        padding-left: 2rem;
     }
 
     .about-image img {
@@ -547,16 +785,27 @@ body {
     .about-text h2,
     .container-full h2,
     .resonancia-text h2,
+    .consultation-section h2,
     .contact-section h2 {
-        font-size: 2rem;
+        font-size: 1.85rem;
     }
 
-    .contact-section {
-        padding: 4rem 0;
+    .payment-buttons {
+        max-width: 100%;
     }
 
-    .contact-content {
-        padding: 2rem 1.5rem;
+    .payment-link {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .payment-details {
+        text-align: center;
+    }
+
+    .payment-logo {
+        margin-bottom: 0.5rem;
     }
 
     .whatsapp-float {
@@ -576,7 +825,8 @@ body {
     .hero-content,
     .about-content,
     .container-full,
-    .resonancia-content {
+    .resonancia-content,
+    .consultation-content {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -591,28 +841,43 @@ body {
 
     .about-text h2,
     .container-full h2,
-    .resonancia-text h2 {
-        font-size: 1.75rem;
+    .resonancia-text h2,
+    .consultation-section h2 {
+        font-size: 1.65rem;
     }
 
     .contact-section h2 {
-        font-size: 1.75rem;
+        font-size: 1.65rem;
     }
 
     .contact-section h3 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
-    .btn-contact {
+    .consultation-price {
+        font-size: 1.75rem;
+    }
+
+    .btn-contact,
+    .btn-turnito {
         padding: 0.875rem 2rem;
         font-size: 1rem;
     }
 
+    .btn-payment {
+        padding: 0.875rem 1.5rem;
+        font-size: 1.05rem;
+    }
+
     .faq-question {
-        padding: 1.25rem 1.5rem;
+        padding: 0.875rem 0;
     }
 
     .faq-question h3 {
-        font-size: 1.125rem;
+        font-size: 1.075rem;
+    }
+
+    .about-list li {
+        font-size: 0.95rem;
     }
 }
