@@ -285,7 +285,64 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+/* ── About Section compact grid ── */
+.about-grid-section {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.about-card-compact {
+    background: var(--warm-bg);
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--border-light);
+    height: 100%;
+}
+
+.about-card-title {
+    font-size: 1rem;
+    color: var(--secondary);
+    margin-bottom: 0.65rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* specialty-tags ya existe, solo ajustamos gap */
+.about-card-compact .specialty-tags {
+    gap: 0.35rem;
+}
+
+.about-card-compact .specialty-tags span {
+    font-size: 0.82rem;
+    padding: 0.3rem 0.7rem;
+}
+
+/* Experience items en dos columnas */
+.exp-item {
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    padding: 0.28rem 0 0.28rem 1.1rem;
+    position: relative;
+    line-height: 1.35;
+}
+
+.exp-item::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-size: 0.8rem;
+    top: 0.3rem;
+}
+
+/* Mobile: apilan normalmente */
+@media (max-width: 767px) {
+    .about-card-compact {
+        padding: 1rem;
+    }
+}
 /* About Section */
 .about-section {
     background-color: white;

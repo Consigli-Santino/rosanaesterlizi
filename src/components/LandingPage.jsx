@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { WhatsAppFloating } from './WhatsAppContact';
 import heroImg from '../../assets/mamafotolanding.jpeg';
-import turnitoLogo from '../../assets/turnito-logo.png';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -48,10 +47,11 @@ const LandingPage = () => {
                         Creadora del programa <strong>"Resonancia Emocional Nutritiva"</strong>
                     </p>
 
-                    <div className="row mt-4">
-                        <div className="col-md-6">
-                            <div className="specialties">
-                                <h4>Especialización en:</h4>
+                    <div className="about-grid-section row g-3 mt-3 align-items-start">
+                        {/* Especialización */}
+                        <div className="col-lg-5 col-md-6">
+                            <div className="about-card-compact">
+                                <h4 className="about-card-title">Especialización en:</h4>
                                 <div className="specialty-tags">
                                     <span>Trastornos del ánimo</span>
                                     <span>Adultos</span>
@@ -61,17 +61,22 @@ const LandingPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-6">
-                            <div className="experience-areas">
-                                <h4>Experiencia en:</h4>
-                                <ul>
-                                    <li>Malestar anímico persistente</li>
-                                    <li>Conflictos relacionales</li>
-                                    <li>Autoestima disfuncional</li>
-                                    <li>Sensación de estancamiento</li>
-                                    <li>Desregulación emocional</li>
-                                    <li>Procesos de desarrollo y transformación personal</li>
-                                </ul>
+                        {/* Experiencia */}
+                        <div className="col-lg-7 col-md-6">
+                            <div className="about-card-compact">
+                                <h4 className="about-card-title">Experiencia en:</h4>
+                                <div className="row g-1">
+                                    <div className="col-6">
+                                        <div className="exp-item">Malestar anímico persistente</div>
+                                        <div className="exp-item">Conflictos relacionales</div>
+                                        <div className="exp-item">Autoestima disfuncional</div>
+                                    </div>
+                                    <div className="col-6">
+                                        <div className="exp-item">Sensación de estancamiento</div>
+                                        <div className="exp-item">Desregulación emocional</div>
+                                        <div className="exp-item">Transformación personal</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -83,6 +88,11 @@ const LandingPage = () => {
                 <div className="container">
                     <h2>¿En qué situación puedo acompañarte?</h2>
                     <div className="row g-3 justify-content-center">
+                        <div className="col-lg-5 col-md-6">
+                            <div className="reason-card">
+                                <p>Cuando deseas reconectar con tu energía vital y positiva, encontrar la transformación en tu interior y vivir en armonía con la naturaleza: espíritu "Pura Vida".</p>
+                            </div>
+                        </div>
                         <div className="col-lg-5 col-md-6">
                             <div className="reason-card">
                                 <p>"Quiero dejar de perderme en mi relación de pareja"</p>
@@ -97,11 +107,10 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            {/* Method Section */}
+            {/* Program Section */}
             <section className="method-section">
                 <div className="container">
-                    <h2>Acerca del método</h2>
-                    <h3>¿Qué propone la Resonancia Emocional Nutritiva?</h3>
+                    <h2>Acerca del programa</h2>
 
                     <p className="method-description">
                         Un acompañamiento profesional que atiende <strong>mente, emoción y cuerpo</strong>, donde desde un rol activo y en resonancia con otros me encuentro, me reconozco y me renuevo.
@@ -118,9 +127,9 @@ const LandingPage = () => {
 
                     <div className="method-faq">
                         <div className="faq-item">
-                            <h4>¿Este método es adecuado si me siento agotado o estresado?</h4>
+                            <h4>¿Este programa es adecuado si me siento agotado o estresado?</h4>
                             <p>
-                                Sí. El método Resonancia Emocional Nutritiva es especialmente adecuado cuando hay agotamiento emocional, estrés sostenido o sensación de saturación. El trabajo terapéutico apunta a comprender qué sostiene ese desgaste, regular la sobrecarga emocional y recuperar vitalidad y claridad interna, respetando los tiempos y el contexto de cada persona.
+                                Sí. El programa Resonancia Emocional Nutritiva es especialmente adecuado cuando hay agotamiento emocional, estrés sostenido o sensación de saturación. El trabajo terapéutico apunta a comprender qué sostiene ese desgaste, regular la sobrecarga emocional y recuperar vitalidad y claridad interna, respetando los tiempos y el contexto de cada persona.
                             </p>
                         </div>
                     </div>
@@ -232,7 +241,7 @@ const LandingPage = () => {
                         <p>✓ Cada sesión aporta a la atención de personas de bajos recursos</p>
                     </div>
 
-                    {/* Payment Method - Right below pricing */}
+                    {/* Payment Method */}
                     <div className="payment-method-section">
                         <h3>Método de pago</h3>
                         {!selectedPrice && (
@@ -271,20 +280,6 @@ const LandingPage = () => {
                                 Después de realizar el pago, envía el comprobante por WhatsApp para coordinar tu consulta.
                             </p>
                         )}
-
-                        <div className="text-center mt-4">
-                            <a
-                                href="https://turnito.app/c/rosanaesterlizi"
-                                className="btn-turnito"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <span className="turnito-logo-wrapper">
-                                    <img src={turnitoLogo} alt="Turnito" className="turnito-icon" />
-                                </span>
-                                Agendar turno en Turnito
-                            </a>
-                        </div>
                     </div>
                 </div>
             </section>
