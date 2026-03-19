@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { WhatsAppFloating } from './WhatsAppContact';
 import heroImg from '../../assets/mamafotolanding.jpeg';
+import turnitoLogo from '../../assets/turnito-logo.png';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -280,6 +281,20 @@ const LandingPage = () => {
                                 Después de realizar el pago, envía el comprobante por WhatsApp para coordinar tu consulta.
                             </p>
                         )}
+
+                        <div className="text-center mt-4">
+                            <a
+                                href="https://turnito.app/c/rosanaesterlizi"
+                                className="btn-turnito"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span className="turnito-logo-wrapper">
+                                    <img src={turnitoLogo} alt="Turnito" className="turnito-icon" />
+                                </span>
+                                Agendar turno en Turnito
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
