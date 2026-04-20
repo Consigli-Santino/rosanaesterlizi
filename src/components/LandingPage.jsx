@@ -45,8 +45,14 @@ const LandingPage = () => {
                     </div>
 
                     <p className="about-description text-center">
-                        Creadora del programa <strong>"Resonancia Emocional Nutritiva"</strong>
+                        Creadora del programa:
                     </p>
+                    <p className="about-description text-center">
+                        <strong>
+                            "Resonancia Emocional Nutritiva"
+                        </strong>
+                    </p>
+
 
                     <div className="about-grid-section row g-3 mt-3 align-items-start">
                         {/* Especialización */}
@@ -96,12 +102,12 @@ const LandingPage = () => {
                         </div>
                         <div className="col-lg-5 col-md-6">
                             <div className="reason-card">
-                                <p>"Quiero dejar de perderme en mi relación de pareja"</p>
+                                <p>"Cuando ya no querés atravesar tus dificultades en soledad y buscás un espacio para expresarte, conectar y sentirte acompañado/a junto a otros."</p>
                             </div>
                         </div>
                         <div className="col-lg-5 col-md-6">
                             <div className="reason-card">
-                                <p>"Antes podía hacer muchas cosas, ahora ya no"</p>
+                                <p>"Cuando te cuesta poner límites y terminás postergándote."</p>
                             </div>
                         </div>
                     </div>
@@ -130,7 +136,7 @@ const LandingPage = () => {
                         <div className="faq-item">
                             <h4>¿Este programa es adecuado si me siento agotado o estresado?</h4>
                             <p>
-                                Sí. El programa Resonancia Emocional Nutritiva es especialmente adecuado cuando hay agotamiento emocional, estrés sostenido o sensación de saturación. El trabajo terapéutico apunta a comprender qué sostiene ese desgaste, regular la sobrecarga emocional y recuperar vitalidad y claridad interna, respetando los tiempos y el contexto de cada persona.
+                                Sí. El programa es adecuado cuando hay agotamiento emocional, estrés sostenido o sensación de saturación. El trabajo terapéutico apunta a comprender qué sostiene ese desgaste, regular la sobrecarga emocional y recuperar vitalidad y claridad interna, respetando los tiempos y el contexto de cada persona.
                             </p>
                         </div>
                     </div>
@@ -230,16 +236,24 @@ const LandingPage = () => {
                                 className={`pricing-card program ${selectedPrice === 700 ? 'selected' : ''}`}
                                 onClick={() => setSelectedPrice(700)}
                             >
-                                <h3>Programa: Resonancia Emocional Nutritiva</h3>
+                                <h3>Programa:</h3>
+                                <h4>Resonancia Emocional Nutritiva</h4>
                                 <p className="price">$700 USD</p>
                                 <p className="duration">3 meses</p>
                             </div>
                         </div>
                     </div>
-
-                    <div className="service-benefits">
+                    <div className="service-benefits mb-4">
                         <p>✓ Evaluación y acompañamiento del estado de ánimo</p>
                         <p>✓ Cada sesión aporta a la atención de personas de bajos recursos</p>
+                        <p>✓ Tu participación también ayuda a que personas que hoy tienen recursos limitados accedan a acompañamiento psicológico.</p>
+                    </div>
+                    <div className="method-approach">
+                       <p>¿Te animas a realizar un proceso Terapéutico diferente?</p>
+                        <p>¿Te animas a incluir a otros, familiares, amigos en tu proceso?</p>
+                        <p>Te invito a dar el primer paso: </p>
+                        <p>Es facil, sencillo, pero diferente.
+                            Agenda un turno y comenemos a trabajar juntos.</p>
                     </div>
 
                     {/* Payment Method */}
@@ -247,7 +261,7 @@ const LandingPage = () => {
                         <h3>Método de pago</h3>
                         {!selectedPrice && (
                             <p className="payment-instruction-select">
-                                Por favor, selecciona una consulta arriba para continuar con el pago
+                              Si desea una atención, debe seleccionar una consulta arriba para continuar con el pago
                             </p>
                         )}
 
@@ -255,7 +269,7 @@ const LandingPage = () => {
                             <div className="col-lg-6 col-md-8">
                                 {selectedPrice ? (
                                     <a
-                                        href={`https://www.paypal.com/paypalme/SantinoConsigli/${selectedPrice}`}
+                                        href={`https://www.paypal.com/paypalme/RosanaEsterlizi191/${selectedPrice}`}
                                         className="payment-card paypal"
                                         target="_blank"
                                         rel="noopener noreferrer"
