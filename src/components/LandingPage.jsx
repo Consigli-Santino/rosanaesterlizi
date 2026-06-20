@@ -65,6 +65,10 @@ const LandingPage = () => {
                                     <span>Rupturas</span>
                                     <span>Miedos</span>
                                     <span>Dependencia emocional</span>
+                                    <span>Familia</span>
+                                    <span>Niños</span>
+                                    <span>Adolescentes</span>
+                                    <span>Grupo</span>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +101,12 @@ const LandingPage = () => {
                     <div className="row g-3 justify-content-center">
                         <div className="col-lg-5 col-md-6">
                             <div className="reason-card">
-                                <p>Cuando deseas reconectar con tu energía vital y positiva, encontrar la transformación en tu interior y vivir en armonía con la naturaleza: espíritu "Pura Vida".</p>
+                                <p>Cuando deseas reconectar con vos y los demás.</p>
+                            </div>
+                        </div>
+                        <div className="col-lg-5 col-md-6">
+                            <div className="reason-card">
+                                <p>Cuando deseas encontrar la transformación de tu interior en armonía con tu contexto y la naturaleza.</p>
                             </div>
                         </div>
                         <div className="col-lg-5 col-md-6">
@@ -134,9 +143,15 @@ const LandingPage = () => {
 
                     <div className="method-faq">
                         <div className="faq-item">
-                            <h4>¿Este programa es adecuado si me siento agotado o estresado?</h4>
+                            <h4>¿Este programa es adecuado si me siento estresado?</h4>
                             <p>
-                                Sí. El programa es adecuado cuando hay agotamiento emocional, estrés sostenido o sensación de saturación. El trabajo terapéutico apunta a comprender qué sostiene ese desgaste, regular la sobrecarga emocional y recuperar vitalidad y claridad interna, respetando los tiempos y el contexto de cada persona.
+                                Sí, puede ser una buena opción si te sentís estresado, ya que el programa trabaja en la reducción de las tensiones acumuladas que afectan la salud y la calidad de vida. A través de un abordaje integral, busca ayudarte a recuperar el equilibrio interno, promoviendo la regulación en diferentes niveles: conductual, emocional, alimentario y vincular, favoreciendo un mayor bienestar en la vida cotidiana.
+                            </p>
+                        </div>
+                        <div className="faq-item">
+                            <h4>¿Este programa es adecuado si me preocupa un familiar (hijo, sobrino, pareja, etc.)?</h4>
+                            <p>
+                                Sí. El programa toma como punto de partida las situaciones, problemas o necesidades que te preocupan respecto de ese familiar, para comprenderlas mejor y orientar intervenciones y estrategias de acompañamiento adecuadas.
                             </p>
                         </div>
                     </div>
@@ -188,64 +203,64 @@ const LandingPage = () => {
                     <div className="row g-3">
                         <div className="col-lg-4 col-md-6">
                             <div
-                                className={`pricing-card ${selectedPrice === 25 ? 'selected' : ''}`}
-                                onClick={() => setSelectedPrice(25)}
+                                className={`pricing-card ${selectedPrice === 'informativa' ? 'selected' : ''}`}
+                                onClick={() => setSelectedPrice(prev => prev === 'informativa' ? null : 'informativa')}
                             >
                                 <h3>Consulta Informativa</h3>
-                                <p className="price">$25 USD</p>
+                                <p className="price">$30.000</p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6">
                             <div
-                                className={`pricing-card featured ${selectedPrice === 60 ? 'selected' : ''}`}
-                                onClick={() => setSelectedPrice(60)}
+                                className={`pricing-card featured ${selectedPrice === 'individual' ? 'selected' : ''}`}
+                                onClick={() => setSelectedPrice(prev => prev === 'individual' ? null : 'individual')}
                             >
                                 <h3>Psicoterapia Individual</h3>
-                                <p className="price">$60 USD</p>
+                                <p className="price">$45.000</p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6">
                             <div
-                                className={`pricing-card ${selectedPrice === 70 ? 'selected' : ''}`}
-                                onClick={() => setSelectedPrice(70)}
+                                className={`pricing-card ${selectedPrice === 'pareja' ? 'selected' : ''}`}
+                                onClick={() => setSelectedPrice(prev => prev === 'pareja' ? null : 'pareja')}
                             >
                                 <h3>Psicoterapia de Pareja</h3>
-                                <p className="price">$70 USD</p>
+                                <p className="price">$55.000</p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6">
                             <div
-                                className={`pricing-card ${selectedPrice === 70 ? 'selected' : ''}`}
-                                onClick={() => setSelectedPrice(70)}
+                                className={`pricing-card ${selectedPrice === 'familiar' ? 'selected' : ''}`}
+                                onClick={() => setSelectedPrice(prev => prev === 'familiar' ? null : 'familiar')}
                             >
                                 <h3>Psicoterapia Familiar</h3>
-                                <p className="price">$70 USD</p>
+                                <p className="price">$55.000</p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6">
                             <div
-                                className={`pricing-card ${selectedPrice === 30 ? 'selected' : ''}`}
-                                onClick={() => setSelectedPrice(30)}
+                                className={`pricing-card ${selectedPrice === 'grupal' ? 'selected' : ''}`}
+                                onClick={() => setSelectedPrice(prev => prev === 'grupal' ? null : 'grupal')}
                             >
                                 <h3>Psicoterapia Grupal</h3>
-                                <p className="price">$30 USD</p>
+                                <p className="price">$20.000</p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6">
                             <div
-                                className={`pricing-card program ${selectedPrice === 700 ? 'selected' : ''}`}
-                                onClick={() => setSelectedPrice(700)}
+                                className={`pricing-card program ${selectedPrice === 'programa' ? 'selected' : ''}`}
+                                onClick={() => setSelectedPrice(prev => prev === 'programa' ? null : 'programa')}
                             >
                                 <h3>Programa:</h3>
                                 <h4>Resonancia Emocional Nutritiva</h4>
-                                <p className="price">$700 USD</p>
+                                <p className="price">$360.000</p>
                                 <p className="duration">3 meses</p>
                             </div>
                         </div>
                     </div>
                     <div className="service-benefits mb-4">
                         <p>✓ Evaluación y acompañamiento del estado de ánimo</p>
-                        <p>✓ Cada sesión aporta a la atención de personas de bajos recursos</p>
+                        <p>✓ Cada sesión aporta a la atención de personas de recursos limitados</p>
                         <p>✓ Tu participación también ayuda a que personas que hoy tienen recursos limitados accedan a acompañamiento psicológico.</p>
                     </div>
                     <div className="method-approach">
@@ -269,22 +284,25 @@ const LandingPage = () => {
                             <div className="col-lg-6 col-md-8">
                                 {selectedPrice ? (
                                     <a
-                                        href={`https://www.paypal.com/paypalme/RosanaEsterlizi191/${selectedPrice}`}
-                                        className="payment-card paypal"
+                                        href="https://mpago.la/"
+                                        className="payment-card mercadopago"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <svg className="payment-icon" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z"/>
+                                        <svg className="payment-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="24" cy="24" r="24" fill="#009EE3"/>
+                                            <path d="M10 24C10 16.268 16.268 10 24 10C31.732 10 38 16.268 38 24C38 31.732 31.732 38 24 38C16.268 38 10 31.732 10 24Z" fill="#009EE3"/>
+                                            <path d="M24 14C18.477 14 14 18.477 14 24C14 29.523 18.477 34 24 34C29.523 34 34 29.523 34 24C34 18.477 29.523 14 24 14ZM28.5 26.5H25.5V29.5H22.5V26.5H19.5V23.5H22.5V20.5H25.5V23.5H28.5V26.5Z" fill="white"/>
                                         </svg>
-                                        <span>Pagar ${selectedPrice} USD con PayPal</span>
+                                        <span>Pagar con Mercado Pago</span>
                                     </a>
                                 ) : (
-                                    <div className="payment-card paypal disabled">
-                                        <svg className="payment-icon" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z"/>
+                                    <div className="payment-card mercadopago disabled">
+                                        <svg className="payment-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="24" cy="24" r="24" fill="#cccccc"/>
+                                            <path d="M24 14C18.477 14 14 18.477 14 24C14 29.523 18.477 34 24 34C29.523 34 34 29.523 34 24C34 18.477 29.523 14 24 14ZM28.5 26.5H25.5V29.5H22.5V26.5H19.5V23.5H22.5V20.5H25.5V23.5H28.5V26.5Z" fill="white"/>
                                         </svg>
-                                        <span>Selecciona una consulta para pagar</span>
+                                        <span>Seleccioná una consulta para pagar</span>
                                     </div>
                                 )}
                             </div>
@@ -292,7 +310,7 @@ const LandingPage = () => {
 
                         {selectedPrice && (
                             <p className="payment-note">
-                                Después de realizar el pago, envía el comprobante por WhatsApp para coordinar tu consulta.
+                                Después de realizar el pago, enviá el comprobante por WhatsApp para coordinar tu consulta.
                             </p>
                         )}
 

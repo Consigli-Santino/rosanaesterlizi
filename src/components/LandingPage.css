@@ -591,6 +591,48 @@ section {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
+.payment-card.mercadopago {
+    background: #009EE3;
+    color: white;
+    border-color: #009EE3;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.payment-card.mercadopago:hover {
+    background: #0081c0;
+    border-color: #0081c0;
+}
+
+.payment-card.mercadopago.disabled {
+    background: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.payment-card.mercadopago.disabled:hover {
+    transform: none;
+    box-shadow: none;
+    background: #ccc;
+}
+
+.payment-card.mercadopago .payment-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+}
+
+.payment-card.mercadopago span {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
 .payment-card.paypal {
     background: #0070ba;
     color: white;
