@@ -205,13 +205,28 @@ const LandingPage = () => {
                             </div>
                         </div>
                     </div>
+
+                    <div className="benefits-motivation-row">
+                        <div className="service-benefits mb-4">
+                            <p>✓ Evaluación y acompañamiento del estado de ánimo</p>
+                            <p>✓ Cada sesión aporta a la atención de personas de recursos limitados</p>
+                            <p>✓ Tu participación también ayuda a que personas que hoy tienen recursos limitados accedan a acompañamiento psicológico.</p>
+                        </div>
+                        <div className="method-approach">
+                           <p>¿Te animas a realizar un proceso Terapéutico diferente?</p>
+                            <p>¿Te animas a incluir a otros, familiares, amigos en tu proceso?</p>
+                            <p>Te invito a dar el primer paso: </p>
+                            <p>Es facil, sencillo, pero diferente.
+                                Agenda un turno y comencemos a trabajar juntos.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             {/* Services & Pricing Section */}
             <section className="services-section">
                 <div className="container">
-                    <h2>Agenda tu hora</h2>
+                    <h2>Seleccioná tipo de consulta</h2>
                     <p className="services-subtitle">Online / 60 minutos</p>
 
                     <div className="row g-3">
@@ -317,19 +332,6 @@ const LandingPage = () => {
                                 Después de realizar el pago, enviá el comprobante por WhatsApp para coordinar tu consulta.
                             </p>
                         )}
-                    </div>
-
-                    <div className="service-benefits mb-4">
-                        <p>✓ Evaluación y acompañamiento del estado de ánimo</p>
-                        <p>✓ Cada sesión aporta a la atención de personas de recursos limitados</p>
-                        <p>✓ Tu participación también ayuda a que personas que hoy tienen recursos limitados accedan a acompañamiento psicológico.</p>
-                    </div>
-                    <div className="method-approach">
-                       <p>¿Te animas a realizar un proceso Terapéutico diferente?</p>
-                        <p>¿Te animas a incluir a otros, familiares, amigos en tu proceso?</p>
-                        <p>Te invito a dar el primer paso: </p>
-                        <p>Es facil, sencillo, pero diferente.
-                            Agenda un turno y comencemos a trabajar juntos.</p>
                     </div>
                 </div>
             </section>

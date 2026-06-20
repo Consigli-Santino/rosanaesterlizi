@@ -242,6 +242,26 @@ section {
     margin-top: 0.25rem;
 }
 
+.benefits-motivation-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .benefits-motivation-row {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .benefits-motivation-row .service-benefits,
+    .benefits-motivation-row .method-approach {
+        flex: 1;
+        margin: 2rem 0 0;
+        max-width: none;
+    }
+}
+
 .service-benefits {
     background: white;
     padding: 1.5rem;
