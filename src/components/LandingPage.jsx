@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
-import { WhatsAppFloating } from './WhatsAppContact';
+import React, { useState, useRef } from 'react';
+import { WhatsAppFloating, WhatsAppIcon } from './WhatsAppContact';
 import heroImg from '../../assets/mamafotolanding.jpeg';
-import turnitoLogo from '../../assets/turnito-logo.png';
+import mercadopagoLogo from '../../assets/mercadopago-logo.svg';
+import instagramLogo from '../../assets/instagram-logo.svg';
 import './LandingPage.css';
 
 const LandingPage = () => {
     const [selectedPrice, setSelectedPrice] = useState(null);
+    const paymentSectionRef = useRef(null);
+
+    const selectPrice = (value) => {
+        setSelectedPrice(prev => {
+            const next = prev === value ? null : value;
+            if (next) {
+                setTimeout(() => {
+                    paymentSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+            return next;
+        });
+    };
 
     return (
         <>
@@ -204,7 +218,7 @@ const LandingPage = () => {
                         <div className="col-lg-4 col-md-6">
                             <div
                                 className={`pricing-card ${selectedPrice === 'informativa' ? 'selected' : ''}`}
-                                onClick={() => setSelectedPrice(prev => prev === 'informativa' ? null : 'informativa')}
+                                onClick={() => selectPrice('informativa')}
                             >
                                 <h3>Consulta Informativa</h3>
                                 <p className="price">$30.000</p>
@@ -213,7 +227,7 @@ const LandingPage = () => {
                         <div className="col-lg-4 col-md-6">
                             <div
                                 className={`pricing-card featured ${selectedPrice === 'individual' ? 'selected' : ''}`}
-                                onClick={() => setSelectedPrice(prev => prev === 'individual' ? null : 'individual')}
+                                onClick={() => selectPrice('individual')}
                             >
                                 <h3>Psicoterapia Individual</h3>
                                 <p className="price">$45.000</p>
@@ -222,7 +236,7 @@ const LandingPage = () => {
                         <div className="col-lg-4 col-md-6">
                             <div
                                 className={`pricing-card ${selectedPrice === 'pareja' ? 'selected' : ''}`}
-                                onClick={() => setSelectedPrice(prev => prev === 'pareja' ? null : 'pareja')}
+                                onClick={() => selectPrice('pareja')}
                             >
                                 <h3>Psicoterapia de Pareja</h3>
                                 <p className="price">$55.000</p>
@@ -231,7 +245,7 @@ const LandingPage = () => {
                         <div className="col-lg-4 col-md-6">
                             <div
                                 className={`pricing-card ${selectedPrice === 'familiar' ? 'selected' : ''}`}
-                                onClick={() => setSelectedPrice(prev => prev === 'familiar' ? null : 'familiar')}
+                                onClick={() => selectPrice('familiar')}
                             >
                                 <h3>Psicoterapia Familiar</h3>
                                 <p className="price">$55.000</p>
@@ -240,7 +254,7 @@ const LandingPage = () => {
                         <div className="col-lg-4 col-md-6">
                             <div
                                 className={`pricing-card ${selectedPrice === 'grupal' ? 'selected' : ''}`}
-                                onClick={() => setSelectedPrice(prev => prev === 'grupal' ? null : 'grupal')}
+                                onClick={() => selectPrice('grupal')}
                             >
                                 <h3>Psicoterapia Grupal</h3>
                                 <p className="price">$20.000</p>
@@ -249,7 +263,7 @@ const LandingPage = () => {
                         <div className="col-lg-4 col-md-6">
                             <div
                                 className={`pricing-card program ${selectedPrice === 'programa' ? 'selected' : ''}`}
-                                onClick={() => setSelectedPrice(prev => prev === 'programa' ? null : 'programa')}
+                                onClick={() => selectPrice('programa')}
                             >
                                 <h3>Programa:</h3>
                                 <h4>Resonancia Emocional Nutritiva</h4>
@@ -258,21 +272,9 @@ const LandingPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="service-benefits mb-4">
-                        <p>✓ Evaluación y acompañamiento del estado de ánimo</p>
-                        <p>✓ Cada sesión aporta a la atención de personas de recursos limitados</p>
-                        <p>✓ Tu participación también ayuda a que personas que hoy tienen recursos limitados accedan a acompañamiento psicológico.</p>
-                    </div>
-                    <div className="method-approach">
-                       <p>¿Te animas a realizar un proceso Terapéutico diferente?</p>
-                        <p>¿Te animas a incluir a otros, familiares, amigos en tu proceso?</p>
-                        <p>Te invito a dar el primer paso: </p>
-                        <p>Es facil, sencillo, pero diferente.
-                            Agenda un turno y comenemos a trabajar juntos.</p>
-                    </div>
 
                     {/* Payment Method */}
-                    <div className="payment-method-section">
+                    <div className="payment-method-section" ref={paymentSectionRef}>
                         <h3>Método de pago</h3>
                         {!selectedPrice && (
                             <p className="payment-instruction-select">
@@ -289,19 +291,12 @@ const LandingPage = () => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <svg className="payment-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="24" cy="24" r="24" fill="#009EE3"/>
-                                            <path d="M10 24C10 16.268 16.268 10 24 10C31.732 10 38 16.268 38 24C38 31.732 31.732 38 24 38C16.268 38 10 31.732 10 24Z" fill="#009EE3"/>
-                                            <path d="M24 14C18.477 14 14 18.477 14 24C14 29.523 18.477 34 24 34C29.523 34 34 29.523 34 24C34 18.477 29.523 14 24 14ZM28.5 26.5H25.5V29.5H22.5V26.5H19.5V23.5H22.5V20.5H25.5V23.5H28.5V26.5Z" fill="white"/>
-                                        </svg>
+                                        <img src={mercadopagoLogo} alt="Mercado Pago" className="payment-icon mp-icon" />
                                         <span>Pagar con Mercado Pago</span>
                                     </a>
                                 ) : (
                                     <div className="payment-card mercadopago disabled">
-                                        <svg className="payment-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="24" cy="24" r="24" fill="#cccccc"/>
-                                            <path d="M24 14C18.477 14 14 18.477 14 24C14 29.523 18.477 34 24 34C29.523 34 34 29.523 34 24C34 18.477 29.523 14 24 14ZM28.5 26.5H25.5V29.5H22.5V26.5H19.5V23.5H22.5V20.5H25.5V23.5H28.5V26.5Z" fill="white"/>
-                                        </svg>
+                                        <img src={mercadopagoLogo} alt="Mercado Pago" className="payment-icon mp-icon" />
                                         <span>Seleccioná una consulta para pagar</span>
                                     </div>
                                 )}
@@ -309,24 +304,32 @@ const LandingPage = () => {
                         </div>
 
                         {selectedPrice && (
+                            <div className="mp-account-data">
+                                <p className="mp-account-title">Datos para transferir por Mercado Pago</p>
+                                <p><strong>Alias:</strong> rosa.flor.grande.mp</p>
+                                <p><strong>CVU:</strong> 0000003100003144764052</p>
+                                <p><strong>Nombre:</strong> Rosana Beatriz Esterlizi</p>
+                            </div>
+                        )}
+
+                        {selectedPrice && (
                             <p className="payment-note">
                                 Después de realizar el pago, enviá el comprobante por WhatsApp para coordinar tu consulta.
                             </p>
                         )}
+                    </div>
 
-                        <div className="text-center mt-4">
-                            <a
-                                href="https://turnito.app/c/rosanaesterlizi"
-                                className="btn-turnito"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <span className="turnito-logo-wrapper">
-                                    <img src={turnitoLogo} alt="Turnito" className="turnito-icon" />
-                                </span>
-                                Agendar turno en Turnito
-                            </a>
-                        </div>
+                    <div className="service-benefits mb-4">
+                        <p>✓ Evaluación y acompañamiento del estado de ánimo</p>
+                        <p>✓ Cada sesión aporta a la atención de personas de recursos limitados</p>
+                        <p>✓ Tu participación también ayuda a que personas que hoy tienen recursos limitados accedan a acompañamiento psicológico.</p>
+                    </div>
+                    <div className="method-approach">
+                       <p>¿Te animas a realizar un proceso Terapéutico diferente?</p>
+                        <p>¿Te animas a incluir a otros, familiares, amigos en tu proceso?</p>
+                        <p>Te invito a dar el primer paso: </p>
+                        <p>Es facil, sencillo, pero diferente.
+                            Agenda un turno y comencemos a trabajar juntos.</p>
                     </div>
                 </div>
             </section>
@@ -335,14 +338,26 @@ const LandingPage = () => {
             <section className="contact-section">
                 <div className="container">
                     <h2>Contacto</h2>
-                    <a
-                        href="https://wa.me/5493516971458?text=Hola!%20Me%20gustar%C3%ADa%20realizar%20una%20consulta."
-                        className="btn-contact"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Contactar por WhatsApp
-                    </a>
+                    <div className="contact-buttons">
+                        <a
+                            href="https://wa.me/5493516971458?text=Hola!%20Me%20gustar%C3%ADa%20realizar%20una%20consulta."
+                            className="btn-contact"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <WhatsAppIcon className="whatsapp-icon-sm" />
+                            Contactar por WhatsApp
+                        </a>
+                        <a
+                            href="https://www.instagram.com/rosana_esterlizi?igsh=N3Z4aWhwZGlzcTM0"
+                            className="btn-contact"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={instagramLogo} alt="Instagram" className="instagram-icon" />
+                            Seguime en Instagram
+                        </a>
+                    </div>
                 </div>
             </section>
 
